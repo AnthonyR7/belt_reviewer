@@ -1,0 +1,24 @@
+<html>
+<head>
+    <!-- <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>Dashboard</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script> -->
+</head>
+<body>
+    {% for property in request.session.client%}
+    <h1>Hello {{property.alias}}</h1>
+    {%endfor%}
+
+    {% for u in item %}
+	    <h3>Item_name </h3>
+        <p>Created at: </p>
+        <p>Udatedat at: </p>
+		 <p><a href="/users//edit">Edit</a> | <a href="/users//destroy">Delete</a></p>
+	 {% endfor %}
+	<a href="/back">Log out</a>
+
+</body>
+</html>
